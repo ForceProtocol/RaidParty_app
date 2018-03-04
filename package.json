@@ -1,21 +1,13 @@
 {
-  "name": "PepperoniAppTemplate",
-  "author": "Futurice",
-  "description": "React Native App Starter Kit for Android and iOS",
+  "name": "RaidParty",
+  "author": "TriforceTokens",
+  "description": "RaidParty mobile app with React Native App Starter Kit for Android and iOS",
   "license": "MIT",
-  "homepage": "http://getpepperoni.com",
-  "bugs": "https://github.com/futurice/pepperoni-app-kit/issues",
+  "homepage": "http://raidparty.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/futurice/pepperoni-app-kit"
+    "url": "https://github.com/TriForceNetwork/RaidParty_app"
   },
-  "keywords": [
-    "React Native",
-    "Starter Kit",
-    "Bitrise",
-    "Redux",
-    "Auth0"
-  ],
   "version": "1.0.0",
   "private": false,
   "scripts": {
