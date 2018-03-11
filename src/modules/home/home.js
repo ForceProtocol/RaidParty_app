@@ -1,55 +1,52 @@
 import React, { Component } from "react";
 import { ImageBackground, StyleSheet, Dimensions } from "react-native";
-import { Container, Header, Title, Left, Icon, Right, Button, Body, Content,Text, Card, CardItem } from "native-base";
-
-import Splash from '../../assets/images/Splash.jpg';
+import { Container, Header, Title, Left, Icon, Right, Button, Body, Content, Text, Card, CardItem } from "native-base";
+import Background from '../../assets/images/bg_logo_small.png';
 import LoginForm from '../../components/Authentication/LoginForm'
+import HomeHeader from '../../components/common/header.js'
 
 class HomeScreen extends Component {
-  render() {
-      let { height, width } = Dimensions.get('window');
 
-    return (
-      <Container>
-       <ImageBackground
-          source={Splash}
-          style={[styles.backgroundImage, {height:height, width: width}]}
-        >
-        <Header>
-          <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}>
-              <Icon name="menu" />
-            </Button>
-          </Left>
-          <Body>
-            <Title>HomeScreen</Title>
-          </Body>
-          <Right />
-        </Header>
-        <Content>
-          <Card>
-            <CardItem>
-              <Body>
-                <Text>home page screan</Text>
-              </Body>
-            </CardItem>
-          </Card>
-        </Content>
+	componentWillMount() {
+		// if token expired
+		// this.props.navigation.navigate('login');
+	}
 
-            </ImageBackground>
-      </Container>
-  );
-  }
+	render() {
+		const rightComponent = () => <Button transparent> <Icon name="menu" /> </Button>
+		const openDrawer = () => this.props.navigation.navigate("DrawerOpen");
+		let { height, width } = Dimensions.get('window');
+
+		return (
+			<Container>
+				<ImageBackground
+				  source={Background}
+				  style={[styles.backgroundImage, { height:height, width: width }]}
+				>
+				    <HomeHeader
+				        pageName="Home"
+						nav={openDrawer}
+						rightComponent={this.rightComponent}
+				    />
+				    <Content>
+						<Card>
+							<CardItem>
+								<Body>
+									<Text>Home page</Text>
+								</Body>
+							</CardItem>
+						</Card>
+				    </Content>
+				</ImageBackground>
+			</Container>
+		);
+	}
 }
 
 const styles = StyleSheet.create({
     backgroundImage: {
         flex: 1,
-        backgroundColor:'transparent',
-//        justifyContent: 'center',
-//        alignItems: 'center',
+        backgroundColor: 'transparent',
     },
 });
 
