@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ImageBackground, StyleSheet, Dimensions } from "react-native";
 import { Container, Header, Title, Left, Icon, Right, Button, Body, Content, Text, Card, CardItem } from "native-base";
-import Background from '../../assets/images/bg_logo_small.png';
+import Background from '../../assets/images/bg.png';
 import LoginForm from '../../components/Authentication/LoginForm'
 import HomeHeader from '../../components/common/header.js'
 

@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { ImageBackground, StyleSheet, Dimensions } from "react-native";
 import { Container, Header, Title, Left, Icon, Right, Button, Body, Content, Text, Card, CardItem } from "native-base";
-import Background from '../../assets/images/bg_logo_small.png';
-import LoginForm from '../../components/Authentication/LoginForm'
-import AboutHeader from '../../components/common/header.js'
+import Background from '../../assets/images/bg.png';
+import LoginForm from '../../components/Authentication/LoginForm';
+import AboutHeader from '../../components/common/header.js';
 
 class AboutPage extends Component {
 	rightComponent = () => <Button transparent> <Icon name="menu" /> </Button>
+
 	render() {
         const { navigate } = this.props.navigation;
 		const openDrawer = () => navigate("DrawerOpen");
